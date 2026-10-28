@@ -13,4 +13,4 @@
 
 ## Before publishing
 - `contact.html` içindeki örnek e-posta metnini gerçek adresinle değiştir.
-- Proje kartlarındaki örnek içerikleri gerçek çalışmalarınla değiştir.
+- Proje kartlarındaki örnek içerikleri gerçek çalışmalarınla değiştir..

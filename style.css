@@ -83,3 +83,43 @@ h1 .accent { color: var(--accent); }
   .footer { font-size: 8px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition-duration: .01ms !important; } }
+
+
+/* Project showcase additions */
+.project-meta { margin-top: 14px; color: #91a7b9 !important; font-size: .78rem !important; }
+.kora-art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(194, 144, 92, .34), transparent 42%),
+    linear-gradient(135deg, #241b17, #090b0d 70%);
+}
+.kora-art span {
+  color: #ead9c3;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: .22em;
+}
+.project-feature-art {
+  min-height: 270px;
+  margin: 38px 0 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(194, 144, 92, .3), transparent 38%),
+    linear-gradient(135deg, #241b17, #090b0d 70%);
+}
+.project-feature-art span {
+  color: #ead9c3;
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  letter-spacing: .2em;
+}
+.project-feature-art small { color: #c2a98f; font-size: 9px; letter-spacing: .28em; }
+.demo-note { margin-top: 28px; font-size: .85rem; }

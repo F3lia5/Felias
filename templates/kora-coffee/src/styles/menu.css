@@ -1,0 +1,251 @@
+/*
+ * QR menu: a printed menu card. Bottom sheet on phones, side drawer on larger screens.
+ * The <dialog> fills the window (so a click on the dimmed area closes it); .menu__sheet is the card.
+ */
+.menu {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.menu[open] {
+  display: grid;
+  align-items: end;
+}
+
+.menu::backdrop {
+  background: rgba(36, 22, 16, 0.6);
+}
+
+.menu__sheet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: min(92dvh, 46rem);
+  background: var(--card);
+  border-top: 1px solid var(--line-strong);
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.menu__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem var(--gutter) 0.9rem;
+}
+
+.menu__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.menu__brand {
+  margin-top: 0.2rem;
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+}
+
+.menu__close {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin: -0.25rem -0.6rem 0 0;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu__close:hover {
+  background: var(--ink);
+  color: var(--card);
+}
+
+/* Category tabs scroll sideways on narrow screens instead of wrapping. */
+.menu__tabs {
+  display: flex;
+  gap: 1.5rem;
+  padding-inline: var(--gutter);
+  border-bottom: 1px solid var(--line);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.menu__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.menu__tab {
+  flex: none;
+  min-height: 2.875rem;
+  padding: 0.5rem 0;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.9688rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.menu__tab:hover {
+  color: var(--ink);
+}
+
+.menu__tab[aria-selected='true'] {
+  border-bottom-color: var(--ember);
+  color: var(--ink);
+}
+
+.menu__body {
+  flex: 1;
+  min-height: 0;
+  padding: 1.5rem var(--gutter) 1rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.menu__category {
+  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.menu__panel:focus-visible {
+  outline-offset: 6px;
+}
+
+.dish {
+  padding-block: 0.95rem;
+}
+
+.dish + .dish {
+  border-top: 1px solid var(--line);
+}
+
+.dish__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.dish__name {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Dotted leader between name and price, like a printed menu. */
+.dish__dots {
+  flex: 1;
+  min-width: 1rem;
+  border-bottom: 2px dotted var(--line-strong);
+  transform: translateY(-0.25em);
+}
+
+.dish__price {
+  flex: none;
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dish__desc {
+  max-width: 28rem;
+  margin-top: 0.25rem;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.menu__empty {
+  display: grid;
+  justify-items: start;
+  gap: 0.6rem;
+  padding-block: 1.5rem;
+  color: var(--ink-soft);
+}
+
+.menu__empty-title {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.menu__note {
+  padding: 0.8rem var(--gutter) calc(0.8rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+
+@media (min-width: 48rem) {
+  .menu[open] {
+    justify-items: end;
+    align-items: stretch;
+  }
+
+  .menu__sheet {
+    width: min(34rem, 100%);
+    height: 100%;
+    border-top: 0;
+    border-left: 1px solid var(--line-strong);
+    border-radius: 0;
+  }
+
+  .menu__head {
+    padding-top: 1.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .menu[open] .menu__sheet {
+    animation: sheet-up 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .menu[open]::backdrop {
+    animation: fade-in 0.25s ease-out;
+  }
+
+  @media (min-width: 48rem) {
+    .menu[open] .menu__sheet {
+      animation-name: sheet-in;
+    }
+  }
+}
+
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}

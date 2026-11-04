@@ -1,0 +1,255 @@
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.875rem;
+  padding: 0.7rem 1.4rem;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn--primary {
+  background: var(--ember);
+  color: #fff9ee;
+}
+
+.btn--primary:hover {
+  background: var(--ember-deep);
+}
+
+.btn--ghost {
+  border-color: var(--ink);
+  background: transparent;
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.btn--sm {
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: var(--header-h);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand__mark {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex: none;
+}
+
+.nav {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  gap: 2.25rem;
+}
+
+.nav__list a {
+  padding-block: 0.4rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: linear-gradient(var(--ember), var(--ember)) left bottom / 0 1.5px no-repeat;
+  transition: background-size 0.25s;
+}
+
+.nav__list a:hover {
+  background-size: 100% 1.5px;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.site-header__actions .btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 26rem) {
+  .brand {
+    gap: 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  .site-header__actions .btn {
+    padding-inline: 0.8rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* On the narrowest phones the hero button is right below, so the header keeps only brand and menu toggle. */
+@media (max-width: 21.5rem) {
+  .site-header__actions .btn {
+    display: none;
+  }
+}
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.nav-toggle__bars,
+.nav-toggle__bars::before {
+  display: block;
+  width: 1.35rem;
+  height: 1.5px;
+  background: var(--ink);
+  transition: transform 0.25s;
+}
+
+.nav-toggle__bars {
+  position: relative;
+  transform: translateY(-3.5px);
+}
+
+.nav-toggle__bars::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle__bars {
+  transform: translateY(0) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle__bars::before {
+  top: 0;
+  transform: rotate(-90deg);
+}
+
+.mobile-nav {
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.mobile-nav__list a {
+  display: block;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.mobile-nav__list li:last-child a {
+  border-bottom: 0;
+}
+
+@media (min-width: 56rem) {
+  .nav {
+    display: block;
+    margin-left: auto;
+  }
+
+  .site-header__actions {
+    margin-left: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+}
+
+/* ---------- Photo placeholder ---------- */
+.ph {
+  --tone-a: #dccaa8;
+  --tone-b: #b99c74;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(150deg, var(--tone-a), var(--tone-b));
+}
+
+.ph[data-tone='espresso'] {
+  --tone-a: #4b3126;
+  --tone-b: #24150e;
+}
+
+.ph[data-tone='olive'] {
+  --tone-a: #7d8551;
+  --tone-b: #4f5a2c;
+}
+
+.ph[data-tone='ember'] {
+  --tone-a: #d07a4b;
+  --tone-b: #a8481c;
+}
+
+/* Concentric rings, like a cup seen from above. Visible while loading and if the photo fails. */
+.ph::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 52%,
+    transparent 0 14%,
+    rgba(255, 255, 255, 0.3) 14.4% 15.2%,
+    transparent 15.6% 27%,
+    rgba(255, 255, 255, 0.2) 27.4% 28.1%,
+    transparent 28.5% 41%,
+    rgba(255, 255, 255, 0.12) 41.4% 42%,
+    transparent 42.4%
+  );
+}
+
+.ph img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

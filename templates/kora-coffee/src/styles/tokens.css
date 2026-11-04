@@ -1,0 +1,29 @@
+/*
+ * Design tokens: colors, typography and spacing.
+ * Change these values to re-skin the whole site for another café.
+ */
+:root {
+  /* Colors */
+  --paper: #f3ecdd;        /* page background */
+  --paper-deep: #eae0cb;   /* alternate sections */
+  --card: #fbf7ee;         /* menu sheet, QR tile */
+  --ink: #2a1a12;          /* main text */
+  --ink-soft: #5b463a;     /* secondary text */
+  --line: rgba(42, 26, 18, 0.18);
+  --line-strong: rgba(42, 26, 18, 0.45);
+  --espresso: #241610;     /* dark sections */
+  --crema: #e9d9bc;        /* text on dark */
+  --olive: #4f5a2c;        /* open status, quiet accent */
+  --ember: #b04b1b;        /* primary action */
+  --ember-deep: #8f3a12;
+
+  /* Typography */
+  --font-display: 'Young Serif', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-body: 'Hanken Grotesk Variable', 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --gutter: clamp(1.25rem, 4.5vw, 3rem);
+  --maxw: 78rem;
+  --header-h: 4rem;
+  --radius: 3px;
+}

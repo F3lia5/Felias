@@ -1,0 +1,176 @@
+/*
+ * Randevu talebi: sayfadaki tek açık renkli bölüm. Formun, koyu bölümler arasında net bir durak
+ * olması için kırık beyaz zemin ve koyu yazı kullanılır.
+ */
+.appointment {
+  background: var(--paper);
+  color: var(--ink-950);
+  color-scheme: light;
+  border-top: 0;
+}
+
+.appointment :focus-visible {
+  outline-color: var(--ink-950);
+}
+
+.appointment__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.appointment__intro p {
+  max-width: 28rem;
+  margin-top: 1.25rem;
+  color: #44473f;
+  font-size: 1.0625rem;
+}
+
+.form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form__row {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+
+.field__label {
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.control {
+  width: 100%;
+  min-height: 3.1rem;
+  padding: 0.7rem 0.9rem;
+  border: 1.5px solid var(--ink-950);
+  border-radius: var(--radius);
+  background: #f7f6f0;
+  color: var(--ink-950);
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+select.control {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230b0c0d' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 0.8rem;
+}
+
+.control:disabled {
+  border-color: rgba(11, 12, 13, 0.4);
+  background-color: #e3e2da;
+  color: #5b5e56;
+  cursor: not-allowed;
+}
+
+.control--area {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.control::placeholder {
+  color: #6a6d64;
+}
+
+.field__hint {
+  color: #5b5e56;
+  font-size: 0.8125rem;
+}
+
+.field__error {
+  color: var(--error-on-paper);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.field.has-error .control {
+  border-color: var(--error-on-paper);
+  box-shadow: inset 0 0 0 1px var(--error-on-paper);
+}
+
+.form__summary {
+  padding: 0.85rem 1rem;
+  border-left: 4px solid var(--error-on-paper);
+  background: #f7f6f0;
+  color: var(--error-on-paper);
+  font-weight: 700;
+}
+
+.appointment .btn--primary {
+  border-color: var(--ink-950);
+}
+
+.appointment .btn--primary:hover {
+  background: var(--ink-950);
+  color: var(--lime);
+}
+
+.form__result {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: var(--ink-950);
+  color: var(--paper);
+}
+
+.form__result-title {
+  color: var(--lime);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.form__result .link {
+  color: var(--paper);
+}
+
+.form__result :focus-visible {
+  outline-color: var(--lime);
+}
+
+.form__preview summary {
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.form__preview pre {
+  margin: 0.75rem 0 0;
+  padding: 0.9rem;
+  border: 1px solid var(--line-strong);
+  color: #c9cac2;
+  font: 0.875rem/1.55 var(--font);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 40rem) {
+  .form__row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 56rem) {
+  .appointment__grid {
+    grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+    gap: clamp(3rem, 7vw, 6rem);
+    align-items: start;
+  }
+
+  .appointment__intro {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+  }
+}

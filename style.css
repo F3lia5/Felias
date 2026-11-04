@@ -123,3 +123,25 @@ h1 .accent { color: var(--accent); }
 }
 .project-feature-art small { color: #c2a98f; font-size: 9px; letter-spacing: .28em; }
 .demo-note { margin-top: 28px; font-size: .85rem; }
+
+/* PITLINE Auto Studio project artwork */
+.pitline-art, .pitline-feature-art {
+  position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 7px; overflow: hidden; color: #e8f1e4;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(177, 220, 90, .20), transparent 38%),
+    linear-gradient(135deg, #18221a, #080c0a 68%);
+}
+.pitline-art::before, .pitline-feature-art::before {
+  content: ""; position: absolute; width: 58%; height: 42%; border: 1px solid rgba(195,225,150,.20);
+  border-radius: 50%; transform: rotate(-12deg); box-shadow: 0 0 55px rgba(170,210,90,.10);
+}
+.pitline-art span, .pitline-feature-art span {
+  z-index: 1; font-size: clamp(1.8rem, 5vw, 3.8rem); font-weight: 900; letter-spacing: .16em;
+}
+.pitline-art small, .pitline-feature-art small {
+  z-index: 1; color: #b5c69e; font-size: 9px; letter-spacing: .32em;
+}
+.pitline-feature-art {
+  min-height: 300px; margin: 34px 0; border: 1px solid rgba(195,225,150,.16);
+}

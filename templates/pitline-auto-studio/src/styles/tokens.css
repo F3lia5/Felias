@@ -1,0 +1,30 @@
+/*
+ * Tasarım değerleri: renkler, yazı tipi ve boşluklar.
+ * Başka bir müşteri için siteyi yeniden renklendirmek için yalnızca bu değerleri değiştirmek yeterlidir.
+ * (Yazı tipini değiştirirseniz src/main.js içindeki @fontsource importunu da güncelleyin.)
+ */
+:root {
+  /* Renkler */
+  --ink-950: #0b0c0d;   /* sayfa zemini */
+  --ink-900: #111315;   /* dönüşümlü bölümler */
+  --ink-800: #181b1e;   /* öne çıkan yüzeyler */
+  --ink-700: #23272b;
+  --paper: #ecebe4;     /* ana yazı rengi ve açık bölüm zemini */
+  --muted: #9da099;     /* ikincil yazı */
+  --line: rgba(236, 235, 228, 0.16);
+  --line-strong: rgba(236, 235, 228, 0.38);
+  --lime: #c9f31d;      /* vurgu rengi */
+  --on-lime: #0b0c0d;   /* vurgu rengi üzerindeki yazı */
+  --error-on-paper: #a3201a;
+
+  /* Yazı tipi */
+  --font: 'Archivo Variable', 'Archivo', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --display-stretch: 72%;   /* başlıkların darlığı (62–125) */
+  --display-weight: 800;
+
+  /* Yerleşim */
+  --gutter: clamp(1.25rem, 4.5vw, 3rem);
+  --maxw: 80rem;
+  --header-h: 4rem;
+  --radius: 2px;
+}

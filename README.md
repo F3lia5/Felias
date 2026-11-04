@@ -32,3 +32,19 @@ npm run build
 npm run preview
 ```
 Not: KORA demo uygulaması henüz portfolyonun içine gömülü canlı önizleme olarak yayınlanmıyor; kendi Vite geliştirme sunucusunda çalıştırılır. Yayına almadan önce build çıktısını portfolyo içinde uygun bir demo yoluna alarak canlı önizleme ekleyebiliriz.
+
+## PITLINE Auto Studio template
+Oto detailing ve araç yıkama şablonunun kaynak kodları `templates/pitline-auto-studio/` klasöründedir. Portfolyo proje tanıtım sayfası `project-pitline.html`, proje listesi `projects.html` dosyasıdır.
+
+Yerelde çalıştırmak için:
+```bash
+cd templates/pitline-auto-studio
+npm install
+npm run dev
+```
+Üretim derlemesi ve önizleme:
+```bash
+npm run build
+npm run preview
+```
+Şablonun README dosyasında müşteri için düzenlenecek alanlar ve yayına alma kontrol listesi bulunur. `node_modules` arşive eklenmemiştir; bağımlılıklar `npm install` ile kurulur.

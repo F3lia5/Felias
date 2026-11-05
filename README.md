@@ -1,50 +1,32 @@
-# Felias Portfolio — first version
+# Felias Portfolio
 
-## Files
-- `index.html` — giriş sayfası
-- `about.html` — hakkımda
-- `projects.html` — projeler
-- `contact.html` — iletişim
-- `style.css` — ortak tasarım ve responsive stiller
-- `script.js` — ortak menü davranışları
+Kişisel portfolyo ve dört web sitesi şablonunun vitrini. Derleme adımı yok: düz HTML, CSS ve JavaScript.
 
-## Run
-`index.html` dosyasını tarayıcıda açman yeterli. Harici kütüphane veya derleme adımı yok.
+## Yapı
+- `index.html`, `projects.html`, `about.html`, `contact.html` — ana sayfalar
+- `project-kora.html`, `project-pitline.html`, `project-firin.html`, `project-maison.html` — proje detay sayfaları
+- `style.css` — ortak tasarım; renkler dosyanın başındaki `:root` içindedir
+- `script.js` — menü, canlı önizlemeler, cihaz seçimi, belirme animasyonları
+- `fonts/` — yerel yazı tipleri (Bricolage Grotesque, Hanken Grotesk)
+- `assets/shots/` — önizleme yüklenirken ve küçük ekranlarda gösterilen ekran görüntüleri
 
-## Before publishing
-- `contact.html` içindeki örnek e-posta metnini gerçek adresinle değiştir.
-- Proje kartlarındaki örnek içerikleri gerçek çalışmalarınla değiştir.
+## Canlı önizleme nasıl çalışıyor?
+Proje kartları ve detay sayfaları, GitHub Pages'te yayınladığınız sitelerin kendisini küçültülmüş bir tarayıcı penceresinde gösterir (iframe). Kartlara tıklayınca detay sayfası, oradan "Yeni sekmede aç" ile gerçek site açılır.
+Küçük ekranlarda ve veri tasarrufu açıkken iframe yüklenmez; ekran görüntüsü gösterilir.
 
+| Proje | Yayın adresi | Kaynak |
+| --- | --- | --- |
+| KORA Coffee | https://f3lia5.github.io/cafe-template/ | github.com/F3lia5/cafe-template |
+| PITLINE Auto Studio | https://f3lia5.github.io/car-wash-template/ | github.com/F3lia5/car-wash-template |
+| FIRIN NO. 8 | https://f3lia5.github.io/bakery-template/ | github.com/F3lia5/bakery-template |
+| MAISON 1898 | https://f3lia5.github.io/restaurant-template/ | github.com/F3lia5/restaurant-template |
 
-## KORA Coffee template
-KORA Coffee şablonunun kaynak kodları `templates/kora-coffee/` klasöründedir.
-Bu proje Vite ile ayrı çalışan bir demo uygulamasıdır. Portfolyodaki proje tanıtım sayfası `project-kora.html`, proje listesi ise `projects.html` dosyasıdır.
+Adresler HTML dosyalarında `data-live="..."`, `<iframe src="...">` ve bağlantılarda geçer. Bir adres değişirse ilgili dosyalarda toplu bul-değiştir yapın.
 
-KORA demosunu yerelde çalıştırmak için:
-```bash
-cd templates/kora-coffee
-npm install
-npm run dev
-```
-Üretim derlemesi için:
-```bash
-npm run build
-npm run preview
-```
-Not: KORA demo uygulaması henüz portfolyonun içine gömülü canlı önizleme olarak yayınlanmıyor; kendi Vite geliştirme sunucusunda çalıştırılır. Yayına almadan önce build çıktısını portfolyo içinde uygun bir demo yoluna alarak canlı önizleme ekleyebiliriz.
+## Yayınlama
+GitHub'da depo → Settings → Pages → `main` / `(root)`. `.nojekyll` dosyası kökte kalmalıdır.
 
-## PITLINE Auto Studio template
-Oto detailing ve araç yıkama şablonunun kaynak kodları `templates/pitline-auto-studio/` klasöründedir. Portfolyo proje tanıtım sayfası `project-pitline.html`, proje listesi `projects.html` dosyasıdır.
-
-Yerelde çalıştırmak için:
-```bash
-cd templates/pitline-auto-studio
-npm install
-npm run dev
-```
-Üretim derlemesi ve önizleme:
-```bash
-npm run build
-npm run preview
-```
-Şablonun README dosyasında müşteri için düzenlenecek alanlar ve yayına alma kontrol listesi bulunur. `node_modules` arşive eklenmemiştir; bağımlılıklar `npm install` ile kurulur.
+## Yayınlamadan önce
+- `contact.html` içindeki örnek e-posta adresini gerçek adresinizle değiştirin.
+- `about.html` metinlerini kendi bilgilerinizle genişletin.
+- Tüm marka adları, adresler, fiyatlar ve içerikler kurgusal demodur.

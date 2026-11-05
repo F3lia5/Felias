@@ -3,43 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#05090f">
-  <meta name="description" content="KORA Coffee — Felias web tasarım projesi.">
+  <meta name="theme-color" content="#f1eee6">
+  <meta name="description" content="Specialty kahve dükkânları için sıcak, sade ve işlevsel bir dijital vitrin. Ziyaretçiler menüyü inceleyebilir, QR kod üzerinden telefondan açabilir ve işletmenin konum ve saat bilgilerine ulaşabilir.">
   <title>KORA Coffee | Felias</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="page">
-    <header class="topbar">
-      <a class="monogram" href="index.html" aria-label="Felias ana sayfa">F.</a>
-      <div class="top-label">Software engineering · AI · Web</div>
-    </header>
-    <main>
-      <p class="eyebrow">Selected work · Project 001</p>
-      <span class="tag">Coffee shop · QR menu · Responsive website</span>
-      <h1>KORA <span class="accent">Coffee.</span></h1>
-      <p class="lead">Specialty kahve dükkânları için sıcak, sade ve işlevsel bir dijital vitrin. Ziyaretçiler menüyü inceleyebilir, QR kod üzerinden telefondan açabilir ve işletmenin konum bilgilerine ulaşabilir.</p>
-      <div class="project-feature-art" role="img" aria-label="KORA Coffee proje görsel alanı">
-        <span>KORA COFFEE</span>
-        <small>COFFEE, WITHOUT THE RUSH.</small>
-      </div>
-      <div class="section-grid">
-        <article class="info-card"><span class="tag">01 / Experience</span><h2>Menü ve QR deneyimi</h2><p>Menü kategorileri, ürün açıklamaları ve fiyatlar etkileşimli menü penceresinde sunulur. QR kod telefon üzerinden menüye erişim sağlar.</p></article>
-        <article class="info-card"><span class="tag">02 / Business</span><h2>İşletme bilgileri</h2><p>Hikâye, öne çıkan ürünler, galeri, konum, çalışma saatleri ve iletişim alanları tek sayfada bir araya gelir.</p></article>
-        <article class="info-card"><span class="tag">03 / Customization</span><h2>İşletmeye uyarlanabilir</h2><p>Marka adı, renkler, metinler, menü ürünleri, fotoğraflar ve iletişim bilgileri işletmeye göre düzenlenebilir.</p></article>
-        <article class="info-card"><span class="tag">04 / Stack</span><h2>Kullanılan teknolojiler</h2><p>Vite, HTML, CSS ve JavaScript. Arayüz mobil cihazlara uyumludur.</p></article>
-      </div>
-      <p class="muted demo-note">Not: KORA Coffee bu portfolyo için hazırlanmış demo bir konsepttir. İşletme adı, adresi, ürünleri ve iletişim bilgileri örnektir.</p>
-      <div class="menu">
-        <a class="primary" href="templates/kora-coffee/README.md">Kurulum bilgisi ↗</a>
-        <a href="projects.html">Tüm projeler</a>
-      </div>
-    </main>
-    <footer class="footer">
-      <span>© <span data-year>2026</span> Felias</span>
-      <span>Built with intent, kept simple.</span>
-    </footer>
-  </div>
+<body data-section="projects.html">
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+  <header class="topbar">
+    <div class="wrap topbar__bar">
+      <a class="wordmark" href="index.html" aria-label="Felias, ana sayfa">Felias<i>.</i></a>
+      <nav class="nav" aria-label="Ana menü"><ul class="nav__list">
+        <li><a data-nav href="index.html">Başlangıç</a></li>
+        <li><a data-nav href="projects.html">Projeler</a></li>
+        <li><a data-nav href="about.html">Hakkımda</a></li>
+        <li><a data-nav href="contact.html">İletişim</a></li>
+      </ul></nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menüyü aç"><span class="nav-toggle__bars" aria-hidden="true"></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobil menü" hidden><div class="wrap"><ul>
+      <li><a data-nav href="index.html">Başlangıç<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="projects.html">Projeler<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="about.html">Hakkımda<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="contact.html">İletişim<span aria-hidden="true">↗</span></a></li>
+    </ul></div></nav>
+  </header>
+  <main id="icerik" tabindex="-1">
+    <section class="page-head wrap">
+      <p class="eyebrow">Proje 01 / 04</p>
+      <h1>KORA Coffee</h1>
+      <p class="lead">Specialty kahve dükkânları için sıcak, sade ve işlevsel bir dijital vitrin. Ziyaretçiler menüyü inceleyebilir, QR kod üzerinden telefondan açabilir ve işletmenin konum ve saat bilgilerine ulaşabilir.</p>
+      <dl class="meta">
+        <div><dt>Sektör</dt><dd>Kafe · QR menü</dd></div>
+        <div><dt>Dil</dt><dd>Türkçe</dd></div>
+        <div><dt>Teknoloji</dt><dd>Vite · HTML · CSS · JavaScript</dd></div>
+        <div><dt>Durum</dt><dd>Demo şablon</dd></div>
+      </dl>
+    </section>
+
+    <div class="wrap stack-gap">
+      <section aria-labelledby="onizleme">
+        <h2 id="onizleme" class="sr-only">Canlı önizleme</h2>
+        <div class="frame">
+          <div class="frame__bar">
+            <span class="frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="frame__url">f3lia5.github.io/cafe-template</span>
+            <span class="frame__tools">
+              <span class="seg" role="group" aria-label="Önizleme genişliği"><button type="button" data-mode-btn="desktop" aria-pressed="true">Masaüstü</button><button type="button" data-mode-btn="mobile" aria-pressed="false">Mobil</button></span>
+              <a class="btn btn--sm" href="https://f3lia5.github.io/cafe-template/" target="_blank" rel="noopener">Yeni sekmede aç<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a>
+            </span>
+          </div>
+          <div class="frame__stage" data-stage data-mode="desktop">
+            <iframe src="https://f3lia5.github.io/cafe-template/" title="KORA Coffee canlı demo önizlemesi" loading="lazy"></iframe>
+          </div>
+        </div>
+        <p class="note" style="margin-top:1rem">Not: KORA Coffee bu portfolyo için hazırlanmış demo bir konsepttir. İşletme adı, adresi, ürünleri, fiyatları ve iletişim bilgileri örnektir.</p>
+      </section>
+
+      <section aria-labelledby="ozellikler">
+        <div class="section-head"><h2 id="ozellikler">Neler var?</h2></div>
+        <div class="features">
+        <article class="feature" data-reveal><span class="tag">01</span><h3>Menü ve QR deneyimi</h3><p>Kategoriler, ürün açıklamaları ve fiyatlar etkileşimli menü penceresinde sunulur; QR kod menüyü telefonda açar.</p></article>
+        <article class="feature" data-reveal><span class="tag">02</span><h3>İşletme bilgileri</h3><p>Hikâye, öne çıkan ürünler, galeri, konum, çalışma saatleri ve açık/kapalı durumu tek sayfada toplanır.</p></article>
+        <article class="feature" data-reveal><span class="tag">03</span><h3>Kolay uyarlama</h3><p>Marka adı, renkler, metinler, menü ve görseller ayrı yapılandırma dosyalarından değiştirilir.</p></article>
+        <article class="feature" data-reveal><span class="tag">04</span><h3>Erişilebilir arayüz</h3><p>Klavye ile kullanım, görünür odak, anlamsal başlıklar ve hareketi azaltma desteği.</p></article>
+        </div>
+      </section>
+
+      <section aria-labelledby="renkler">
+        <div class="section-head"><h2 id="renkler">Renk dünyası</h2></div>
+        <ul class="palette" data-reveal>
+          <li><i style="background:#f3ecdd"></i><span>#f3ecdd · Kâğıt</span></li>
+          <li><i style="background:#2a1a12"></i><span>#2a1a12 · Mürekkep</span></li>
+          <li><i style="background:#b04b1b"></i><span>#b04b1b · Kor</span></li>
+          <li><i style="background:#4f5a2c"></i><span>#4f5a2c · Zeytin</span></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="kaynak">
+        <div class="section-head"><h2 id="kaynak">Kaynak kod</h2></div>
+        <p class="lead" style="margin-bottom:1.4rem">Kaynak kodu ve özelleştirme rehberi bu projenin GitHub deposundadır.</p>
+        <div class="btn-row"><a class="btn btn--solid" href="https://github.com/F3lia5/cafe-template" target="_blank" rel="noopener">GitHub'da aç<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a><a class="btn" href="projects.html">Tüm projeler</a></div>
+      </section>
+
+      <nav class="pager" aria-label="Diğer projeler">
+        <a href="project-maison.html"><span class="tag">← Önceki</span><strong>MAISON 1898</strong></a>
+        <a href="project-pitline.html"><span class="tag">Sonraki →</span><strong>PITLINE Auto Studio</strong></a>
+      </nav>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <span>© <span data-year>2026</span> Felias · Yazılım mühendisliği · Web · Yapay zekâ</span>
+      <span class="footer__links"><a href="projects.html">Projeler</a><a href="contact.html">İletişim</a><a href="https://github.com/F3lia5" target="_blank" rel="noreferrer">GitHub<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></span>
+    </div>
+  </footer>
 </body>
 </html>

@@ -3,38 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#05090f">
-  <meta name="description" content="Felias — software engineering, web development and AI portfolio.">
-  <title>About | Felias</title>
+  <meta name="theme-color" content="#f1eee6">
+  <meta name="description" content="Felias — yazılım mühendisliği öğrencisi; web geliştirme ve yapay zekâ.">
+  <title>Hakkımda | Felias</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <a class="monogram" href="index.html" aria-label="Felias ana sayfa">F.</a>
-      <div class="top-label">Software engineering · AI · Web</div>
-    </header>
-    <main>
-      <p class="eyebrow">Selected work · Personal portfolio</p>
-      <h1>A little <span class="accent">about</span> me.</h1>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+  <header class="topbar">
+    <div class="wrap topbar__bar">
+      <a class="wordmark" href="index.html" aria-label="Felias, ana sayfa">Felias<i>.</i></a>
+      <nav class="nav" aria-label="Ana menü"><ul class="nav__list">
+        <li><a data-nav href="index.html">Başlangıç</a></li>
+        <li><a data-nav href="projects.html">Projeler</a></li>
+        <li><a data-nav href="about.html">Hakkımda</a></li>
+        <li><a data-nav href="contact.html">İletişim</a></li>
+      </ul></nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menüyü aç"><span class="nav-toggle__bars" aria-hidden="true"></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobil menü" hidden><div class="wrap"><ul>
+      <li><a data-nav href="index.html">Başlangıç<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="projects.html">Projeler<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="about.html">Hakkımda<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="contact.html">İletişim<span aria-hidden="true">↗</span></a></li>
+    </ul></div></nav>
+  </header>
+  <main id="icerik" tabindex="-1">
+    <section class="page-head wrap">
+      <p class="eyebrow">Hakkımda</p>
+      <h1>Kısaca <em>ben</em>.</h1>
       <p class="lead">Yazılım mühendisliği öğrencisiyim; web geliştirme ve yapay zekâ alanlarında kendimi geliştiriyorum.</p>
-      <p class="muted">Bu bölüm zamanla kullandığım teknolojiler, öğrenme sürecim ve çalışma yaklaşımım hakkında daha fazla bilgi içerecek. Şimdilik sade tutuyoruz; içerik netleştikçe genişletebiliriz.</p>
-      <div class="section-grid">
-        <article class="info-card"><span class="tag">01 / Web</span><h2>Web development</h2><p>Kullanışlı, hızlı ve mobil uyumlu web deneyimleri oluşturmak.</p></article>
-        <article class="info-card"><span class="tag">02 / AI</span><h2>Artificial intelligence</h2><p>Makine öğrenmesi ve yapay zekâ sistemlerinin temellerini öğrenmek, küçük projelerle uygulamak.</p></article>
+    </section>
+    <section class="wrap">
+      <div class="cols">
+        <article class="card-info" data-reveal><span class="tag">01 / Web</span><h2>Web geliştirme</h2><p>Kullanışlı, hızlı ve mobil uyumlu web deneyimleri oluşturmak. Bu portfolyodaki siteler Vite, HTML, CSS ve JavaScript ile hazırlandı.</p></article>
+        <article class="card-info" data-reveal><span class="tag">02 / Yapay zekâ</span><h2>Yapay zekâ</h2><p>Makine öğrenmesi ve yapay zekâ sistemlerinin temellerini öğrenmek, küçük projelerle uygulamak.</p></article>
+        <article class="card-info" data-reveal><span class="tag">03 / Yaklaşım</span><h2>Sade ve düzenli</h2><p>İçerik, görsel ve tasarım değerlerini ayrı dosyalarda tutmak; böylece bir site başka bir işletmeye kolayca uyarlanabilir.</p></article>
+        <article class="card-info" data-reveal><span class="tag">04 / Süreç</span><h2>Test ederek ilerlemek</h2><p>Her site farklı ekran genişliklerinde, klavyeyle ve konsol hataları açısından denendi.</p></article>
       </div>
-      <nav class="menu" aria-label="Ana menü">
-          <a data-nav href="index.html">Start ↗</a>
-          <a data-nav href="about.html">About ↗</a>
-          <a data-nav href="projects.html">Projects ↗</a>
-          <a data-nav href="contact.html">Contact ↗</a>
-      </nav>
-    </main>
-    <footer class="footer">
-      <span>© <span data-year>2026</span> Felias</span>
-      <span>Built with intent, kept simple.</span>
-    </footer>
-  </div>
+      <p class="note" style="margin-top:1.6rem">Bu bölüm zamanla kullandığım teknolojiler ve öğrenme sürecim hakkında genişleyecek.</p>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <span>© <span data-year>2026</span> Felias · Yazılım mühendisliği · Web · Yapay zekâ</span>
+      <span class="footer__links"><a href="projects.html">Projeler</a><a href="contact.html">İletişim</a><a href="https://github.com/F3lia5" target="_blank" rel="noreferrer">GitHub<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></span>
+    </div>
+  </footer>
 </body>
 </html>

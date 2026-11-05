@@ -3,44 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#05090f">
-  <meta name="description" content="PITLINE Auto Studio — Felias web tasarım projesi.">
+  <meta name="theme-color" content="#f1eee6">
+  <meta name="description" content="Oto detailing ve araç yıkama işletmeleri için kontrastlı, koyu temalı bir vitrin. Hizmetler ve paketler net biçimde sıralanır; ziyaretçi randevu talebini hazır bir WhatsApp mesajı olarak gönderir.">
   <title>PITLINE Auto Studio | Felias</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="page">
-    <header class="topbar">
-      <a class="monogram" href="index.html" aria-label="Felias ana sayfa">F.</a>
-      <div class="top-label">Software engineering · AI · Web</div>
-    </header>
-    <main>
-      <p class="eyebrow">Selected work · Project 002</p>
-      <span class="tag">Automotive · Detailing · WhatsApp booking</span>
-      <h1>PITLINE <span class="accent">Auto Studio.</span></h1>
-      <p class="lead">Oto yıkama ve detailing işletmeleri için tasarlanmış, hizmetlerini profesyonel biçimde sergileyen ve müşteriyi WhatsApp üzerinden randevu talebine yönlendiren tek sayfalık dijital vitrin.</p>
-      <div class="project-feature-art pitline-feature-art" role="img" aria-label="PITLINE Auto Studio proje görsel alanı">
-        <span>PITLINE</span><small>PRECISION IN EVERY DETAIL</small>
-      </div>
-      <div class="section-grid">
-        <article class="info-card"><span class="tag">01 / Services</span><h2>Hizmet ve paketler</h2><p>Oto yıkama, iç detaylandırma ve boya bakım hizmetleri; açıklama, süre ve başlangıç fiyatlarıyla listelenir. Paketler karşılaştırılabilir.</p></article>
-        <article class="info-card"><span class="tag">02 / Before & after</span><h2>Önce / sonra karşılaştırması</h2><p>Etkileşimli kaydırıcı, işlem öncesi ve sonrası görsellerini karşılaştırmak için kullanılabilir. Şablonda örnek çizimler bulunur.</p></article>
-        <article class="info-card"><span class="tag">03 / Appointment</span><h2>WhatsApp randevu talebi</h2><p>Müşteri hizmet, araç tipi, tarih ve saat seçer. Form, ayrıntıları içeren WhatsApp mesajı hazırlar; randevu işletmenin onayıyla kesinleşir.</p></article>
-        <article class="info-card"><span class="tag">04 / Customization</span><h2>İşletmeye uyarlanabilir</h2><p>Marka, telefon, WhatsApp, adres, çalışma saatleri, hizmetler, paketler, fiyatlar ve görseller müşteri işletmesine göre düzenlenebilir.</p></article>
-        <article class="info-card"><span class="tag">05 / Responsive</span><h2>Mobil uyum ve erişilebilirlik</h2><p>Klavye ile kullanım, belirgin odak durumları, form hata mesajları ve hareketi azaltma tercihi dikkate alınır.</p></article>
-        <article class="info-card"><span class="tag">06 / Stack</span><h2>Kullanılan teknolojiler</h2><p>Vite, HTML, CSS ve JavaScript. Arayüz için Archivo Variable yazı tipi kullanılır.</p></article>
-      </div>
-      <p class="muted demo-note">Not: PITLINE Auto Studio portfolyo için hazırlanmış demo konsepttir. Telefon, adres, çalışma saatleri ve fiyatlar örnektir. WhatsApp numarası yayına almadan önce değiştirilmelidir.</p>
-      <div class="menu">
-        <a class="primary" href="templates/pitline-auto-studio/README.md">Kurulum bilgisi ↗</a>
-        <a href="projects.html">Tüm projeler</a>
-      </div>
-    </main>
-    <footer class="footer">
-      <span>© <span data-year>2026</span> Felias</span>
-      <span>Built with intent, kept simple.</span>
-    </footer>
-  </div>
+<body data-section="projects.html">
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+  <header class="topbar">
+    <div class="wrap topbar__bar">
+      <a class="wordmark" href="index.html" aria-label="Felias, ana sayfa">Felias<i>.</i></a>
+      <nav class="nav" aria-label="Ana menü"><ul class="nav__list">
+        <li><a data-nav href="index.html">Başlangıç</a></li>
+        <li><a data-nav href="projects.html">Projeler</a></li>
+        <li><a data-nav href="about.html">Hakkımda</a></li>
+        <li><a data-nav href="contact.html">İletişim</a></li>
+      </ul></nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menüyü aç"><span class="nav-toggle__bars" aria-hidden="true"></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobil menü" hidden><div class="wrap"><ul>
+      <li><a data-nav href="index.html">Başlangıç<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="projects.html">Projeler<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="about.html">Hakkımda<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="contact.html">İletişim<span aria-hidden="true">↗</span></a></li>
+    </ul></div></nav>
+  </header>
+  <main id="icerik" tabindex="-1">
+    <section class="page-head wrap">
+      <p class="eyebrow">Proje 02 / 04</p>
+      <h1>PITLINE Auto Studio</h1>
+      <p class="lead">Oto detailing ve araç yıkama işletmeleri için kontrastlı, koyu temalı bir vitrin. Hizmetler ve paketler net biçimde sıralanır; ziyaretçi randevu talebini hazır bir WhatsApp mesajı olarak gönderir.</p>
+      <dl class="meta">
+        <div><dt>Sektör</dt><dd>Oto detailing · Yıkama</dd></div>
+        <div><dt>Dil</dt><dd>Türkçe</dd></div>
+        <div><dt>Teknoloji</dt><dd>Vite · HTML · CSS · JavaScript</dd></div>
+        <div><dt>Durum</dt><dd>Demo şablon</dd></div>
+      </dl>
+    </section>
+
+    <div class="wrap stack-gap">
+      <section aria-labelledby="onizleme">
+        <h2 id="onizleme" class="sr-only">Canlı önizleme</h2>
+        <div class="frame">
+          <div class="frame__bar">
+            <span class="frame__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="frame__url">f3lia5.github.io/car-wash-template</span>
+            <span class="frame__tools">
+              <span class="seg" role="group" aria-label="Önizleme genişliği"><button type="button" data-mode-btn="desktop" aria-pressed="true">Masaüstü</button><button type="button" data-mode-btn="mobile" aria-pressed="false">Mobil</button></span>
+              <a class="btn btn--sm" href="https://f3lia5.github.io/car-wash-template/" target="_blank" rel="noopener">Yeni sekmede aç<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a>
+            </span>
+          </div>
+          <div class="frame__stage" data-stage data-mode="desktop">
+            <iframe src="https://f3lia5.github.io/car-wash-template/" title="PITLINE Auto Studio canlı demo önizlemesi" loading="lazy"></iframe>
+          </div>
+        </div>
+        <p class="note" style="margin-top:1rem">Not: PITLINE Auto Studio bu portfolyo için hazırlanmış demo bir konsepttir. İşletme adı, adresi, ürünleri, fiyatları ve iletişim bilgileri örnektir.</p>
+      </section>
+
+      <section aria-labelledby="ozellikler">
+        <div class="section-head"><h2 id="ozellikler">Neler var?</h2></div>
+        <div class="features">
+        <article class="feature" data-reveal><span class="tag">01</span><h3>Hizmetler ve paketler</h3><p>Fiyatlı paket karşılaştırması ve hizmet kartları merkezi veri dosyasından beslenir.</p></article>
+        <article class="feature" data-reveal><span class="tag">02</span><h3>Öncesi / sonrası</h3><p>Fare, dokunmatik ve klavyeyle çalışan karşılaştırma kaydırıcısı.</p></article>
+        <article class="feature" data-reveal><span class="tag">03</span><h3>Randevu talebi</h3><p>Alanlar doğrulanır, hazır Türkçe WhatsApp mesajı oluşturulur. Randevunun onaylandığı iddia edilmez.</p></article>
+        <article class="feature" data-reveal><span class="tag">04</span><h3>Kolay uyarlama</h3><p>Renkler, yazı tipi, paketler, numara ve metinler ayrı dosyalarda; müşteriye göre değiştirilir.</p></article>
+        </div>
+      </section>
+
+      <section aria-labelledby="renkler">
+        <div class="section-head"><h2 id="renkler">Renk dünyası</h2></div>
+        <ul class="palette" data-reveal>
+          <li><i style="background:#0b0c0d"></i><span>#0b0c0d · Grafit</span></li>
+          <li><i style="background:#ecebe4"></i><span>#ecebe4 · Kâğıt</span></li>
+          <li><i style="background:#c9f31d"></i><span>#c9f31d · Limon</span></li>
+          <li><i style="background:#23272b"></i><span>#23272b · Yüzey</span></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="kaynak">
+        <div class="section-head"><h2 id="kaynak">Kaynak kod</h2></div>
+        <p class="lead" style="margin-bottom:1.4rem">Kaynak kodu ve özelleştirme rehberi bu projenin GitHub deposundadır.</p>
+        <div class="btn-row"><a class="btn btn--solid" href="https://github.com/F3lia5/car-wash-template" target="_blank" rel="noopener">GitHub'da aç<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a><a class="btn" href="projects.html">Tüm projeler</a></div>
+      </section>
+
+      <nav class="pager" aria-label="Diğer projeler">
+        <a href="project-kora.html"><span class="tag">← Önceki</span><strong>KORA Coffee</strong></a>
+        <a href="project-firin.html"><span class="tag">Sonraki →</span><strong>FIRIN NO. 8</strong></a>
+      </nav>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <span>© <span data-year>2026</span> Felias · Yazılım mühendisliği · Web · Yapay zekâ</span>
+      <span class="footer__links"><a href="projects.html">Projeler</a><a href="contact.html">İletişim</a><a href="https://github.com/F3lia5" target="_blank" rel="noreferrer">GitHub<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></span>
+    </div>
+  </footer>
 </body>
 </html>

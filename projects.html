@@ -3,37 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#05090f">
-  <meta name="description" content="Felias — seçili web ve yapay zekâ projeleri.">
-  <title>Projects | Felias</title>
+  <meta name="theme-color" content="#f1eee6">
+  <meta name="description" content="Felias — küçük işletmeler için hazırlanmış dört web sitesi şablonu.">
+  <title>Projeler | Felias</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <a class="monogram" href="index.html" aria-label="Felias ana sayfa">F.</a>
-      <div class="top-label">Software engineering · AI · Web</div>
-    </header>
-    <main>
-      <p class="eyebrow">Selected work · Personal portfolio</p>
-      <h1>Selected <span class="accent">projects.</span></h1>
-      <p class="lead">Hazırladığım web sitesi tasarımlarını inceleyin. Her çalışma, farklı bir işletme ihtiyacına göre tasarlanmış ve özelleştirilebilir bir başlangıç noktasıdır.</p>
-      <div class="section-grid">
-        <article class="project-card">
-          <div class="project-art kora-art" aria-hidden="true"><span>KORA</span></div>
-          <span class="tag">01 / Coffee shop · QR menu</span>
-          <h2>KORA Coffee</h2>
-          <p>Specialty kahve dükkânları için tasarlanmış, dijital menü ve QR menü deneyimi içeren tek sayfalık web sitesi.</p>
-          <p class="project-meta">Vite · HTML · CSS · JavaScript</p>
-          <a class="contact-link" href="project-kora.html">Projeyi incele ↗</a>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+  <header class="topbar">
+    <div class="wrap topbar__bar">
+      <a class="wordmark" href="index.html" aria-label="Felias, ana sayfa">Felias<i>.</i></a>
+      <nav class="nav" aria-label="Ana menü"><ul class="nav__list">
+        <li><a data-nav href="index.html">Başlangıç</a></li>
+        <li><a data-nav href="projects.html">Projeler</a></li>
+        <li><a data-nav href="about.html">Hakkımda</a></li>
+        <li><a data-nav href="contact.html">İletişim</a></li>
+      </ul></nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menüyü aç"><span class="nav-toggle__bars" aria-hidden="true"></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobil menü" hidden><div class="wrap"><ul>
+      <li><a data-nav href="index.html">Başlangıç<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="projects.html">Projeler<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="about.html">Hakkımda<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="contact.html">İletişim<span aria-hidden="true">↗</span></a></li>
+    </ul></div></nav>
+  </header>
+  <main id="icerik" tabindex="-1">
+    <section class="page-head wrap">
+      <p class="eyebrow">Seçili işler</p>
+      <h1>Dört site, dört <em>farklı</em> dünya.</h1>
+      <p class="lead">Her çalışma farklı bir işletme ihtiyacına göre tasarlanmış, özelleştirilebilir bir başlangıç noktası. İsimler, adresler, fiyatlar ve içerikler kurgusal demodur.</p>
+    </section>
+    <section class="wrap" aria-label="Proje listesi">
+      <div class="rows">
+        <article class="row" data-reveal>
+          <a class="mini row__shot" href="project-kora.html" tabindex="-1" aria-hidden="true" data-live="https://f3lia5.github.io/cafe-template/">
+            <span class="mini__bar"><span class="mini__dots"><i></i><i></i><i></i></span><span class="mini__host">f3lia5.github.io/cafe-template</span></span>
+            <span class="mini__stage"><img src="assets/shots/kora-coffee.jpg" alt="" width="1200" height="750" loading="lazy"></span>
+          </a>
+          <div class="row__body">
+            <p class="tag">01 / Kafe · QR menü</p>
+            <h2><a href="project-kora.html">KORA Coffee</a></h2>
+            <p class="row__desc">Specialty kahve dükkânları için sıcak ve sade tek sayfalık site: etkileşimli menü, QR kod ve işletme bilgileri.</p>
+            <p class="chips"><span class="chip">Türkçe</span><span class="chip">Mobil uyumlu</span><span class="chip">Vite · HTML · CSS · JavaScript</span></p>
+            <div class="btn-row"><a class="btn btn--solid btn--sm" href="project-kora.html">Projeyi incele</a><a class="btn btn--sm" href="https://f3lia5.github.io/cafe-template/" target="_blank" rel="noopener">Canlı demo<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></div>
+          </div>
+        </article>
+        <article class="row" data-reveal>
+          <a class="mini row__shot" href="project-pitline.html" tabindex="-1" aria-hidden="true" data-live="https://f3lia5.github.io/car-wash-template/">
+            <span class="mini__bar"><span class="mini__dots"><i></i><i></i><i></i></span><span class="mini__host">f3lia5.github.io/car-wash-template</span></span>
+            <span class="mini__stage"><img src="assets/shots/pitline-auto-studio.jpg" alt="" width="1200" height="750" loading="lazy"></span>
+          </a>
+          <div class="row__body">
+            <p class="tag">02 / Oto detailing · Yıkama</p>
+            <h2><a href="project-pitline.html">PITLINE Auto Studio</a></h2>
+            <p class="row__desc">Oto detailing ve araç yıkama işletmeleri için koyu temalı site: hizmetler, paketler, öncesi/sonrası ve WhatsApp ile randevu talebi.</p>
+            <p class="chips"><span class="chip">Türkçe</span><span class="chip">Mobil uyumlu</span><span class="chip">Vite · HTML · CSS · JavaScript</span></p>
+            <div class="btn-row"><a class="btn btn--solid btn--sm" href="project-pitline.html">Projeyi incele</a><a class="btn btn--sm" href="https://f3lia5.github.io/car-wash-template/" target="_blank" rel="noopener">Canlı demo<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></div>
+          </div>
+        </article>
+        <article class="row" data-reveal>
+          <a class="mini row__shot" href="project-firin.html" tabindex="-1" aria-hidden="true" data-live="https://f3lia5.github.io/bakery-template/">
+            <span class="mini__bar"><span class="mini__dots"><i></i><i></i><i></i></span><span class="mini__host">f3lia5.github.io/bakery-template</span></span>
+            <span class="mini__stage"><img src="assets/shots/firin-no-8.jpg" alt="" width="1200" height="750" loading="lazy"></span>
+          </a>
+          <div class="row__body">
+            <p class="tag">03 / Fırın · Pastane</p>
+            <h2><a href="project-firin.html">FIRIN NO. 8</a></h2>
+            <p class="row__desc">Butik fırın ve pastaneler için krem ve bordo tonlarında site: filtreli ürün listesi, ürün penceresi ve WhatsApp ile bilgi talebi.</p>
+            <p class="chips"><span class="chip">Türkçe</span><span class="chip">Mobil uyumlu</span><span class="chip">Vite · HTML · CSS · JavaScript</span></p>
+            <div class="btn-row"><a class="btn btn--solid btn--sm" href="project-firin.html">Projeyi incele</a><a class="btn btn--sm" href="https://f3lia5.github.io/bakery-template/" target="_blank" rel="noopener">Canlı demo<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></div>
+          </div>
+        </article>
+        <article class="row" data-reveal>
+          <a class="mini row__shot" href="project-maison.html" tabindex="-1" aria-hidden="true" data-live="https://f3lia5.github.io/restaurant-template/">
+            <span class="mini__bar"><span class="mini__dots"><i></i><i></i><i></i></span><span class="mini__host">f3lia5.github.io/restaurant-template</span></span>
+            <span class="mini__stage"><img src="assets/shots/maison-1898.jpg" alt="" width="1200" height="750" loading="lazy"></span>
+          </a>
+          <div class="row__body">
+            <p class="tag">04 / Restoran · Tarihi bina</p>
+            <h2><a href="project-maison.html">MAISON 1898</a></h2>
+            <p class="row__desc">Tarihi bir binada hizmet veren restoranlar için ceviz ve bordo tonlu site: menü filtresi, galeri ve WhatsApp ile rezervasyon talebi.</p>
+            <p class="chips"><span class="chip">Türkçe</span><span class="chip">Mobil uyumlu</span><span class="chip">Vite · HTML · CSS · JavaScript</span></p>
+            <div class="btn-row"><a class="btn btn--solid btn--sm" href="project-maison.html">Projeyi incele</a><a class="btn btn--sm" href="https://f3lia5.github.io/restaurant-template/" target="_blank" rel="noopener">Canlı demo<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></div>
+          </div>
         </article>
       </div>
-    </main>
-    <footer class="footer">
-      <span>© <span data-year>2026</span> Felias</span>
-      <span>Built with intent, kept simple.</span>
-    </footer>
-  </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <span>© <span data-year>2026</span> Felias · Yazılım mühendisliği · Web · Yapay zekâ</span>
+      <span class="footer__links"><a href="projects.html">Projeler</a><a href="contact.html">İletişim</a><a href="https://github.com/F3lia5" target="_blank" rel="noreferrer">GitHub<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></span>
+    </div>
+  </footer>
 </body>
 </html>

@@ -3,37 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#05090f">
-  <meta name="description" content="Felias — software engineering, web development and AI portfolio.">
-  <title>Contact | Felias</title>
+  <meta name="theme-color" content="#f1eee6">
+  <meta name="description" content="Felias ile iletişime geç.">
+  <title>İletişim | Felias</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <a class="monogram" href="index.html" aria-label="Felias ana sayfa">F.</a>
-      <div class="top-label">Software engineering · AI · Web</div>
-    </header>
-    <main>
-      <p class="eyebrow">Selected work · Personal portfolio</p>
-      <h1>Let's make<br><span class="accent">something.</span></h1>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+  <header class="topbar">
+    <div class="wrap topbar__bar">
+      <a class="wordmark" href="index.html" aria-label="Felias, ana sayfa">Felias<i>.</i></a>
+      <nav class="nav" aria-label="Ana menü"><ul class="nav__list">
+        <li><a data-nav href="index.html">Başlangıç</a></li>
+        <li><a data-nav href="projects.html">Projeler</a></li>
+        <li><a data-nav href="about.html">Hakkımda</a></li>
+        <li><a data-nav href="contact.html">İletişim</a></li>
+      </ul></nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menüyü aç"><span class="nav-toggle__bars" aria-hidden="true"></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobil menü" hidden><div class="wrap"><ul>
+      <li><a data-nav href="index.html">Başlangıç<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="projects.html">Projeler<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="about.html">Hakkımda<span aria-hidden="true">↗</span></a></li>
+      <li><a data-nav href="contact.html">İletişim<span aria-hidden="true">↗</span></a></li>
+    </ul></div></nav>
+  </header>
+  <main id="icerik" tabindex="-1">
+    <section class="page-head wrap">
+      <p class="eyebrow">İletişim</p>
+      <h1>Birlikte bir <em>şey</em> yapalım.</h1>
       <p class="lead">Bir web sitesi fikrin veya birlikte geliştirebileceğimiz bir proje varsa benimle iletişime geçebilirsin.</p>
-      <div class="section-grid">
-        <article class="info-card"><span class="tag">01 / Email</span><h2>E-posta</h2><p>E-posta adresini belirlediğimizde buraya ekleyeceğiz.</p><span class="muted">hello@example.com — örnek adres</span></article>
-        <article class="info-card"><span class="tag">02 / Code</span><h2>GitHub</h2><p>Projelerimin kaynak kodlarını ve geliştirme sürecini GitHub üzerinden paylaşacağım.</p><a class="contact-link" href="https://github.com/F3lia5" target="_blank" rel="noreferrer">GitHub profilim ↗</a></article>
+    </section>
+    <section class="wrap">
+      <div class="cols">
+        <article class="card-info" data-reveal><span class="tag">01 / E-posta</span><h2>E-posta</h2><p>E-posta adresi belirlendiğinde buraya eklenecek.</p><span class="muted">hello@example.com — örnek adres</span></article>
+        <article class="card-info" data-reveal><span class="tag">02 / Kod</span><h2>GitHub</h2><p>Projelerin kaynak kodları ve geliştirme süreci GitHub üzerinden paylaşılıyor.</p><a class="big-link" href="https://github.com/F3lia5" target="_blank" rel="noreferrer">github.com/F3lia5<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></article>
       </div>
-      <nav class="menu" aria-label="Ana menü">
-          <a data-nav href="index.html">Start ↗</a>
-          <a data-nav href="about.html">About ↗</a>
-          <a data-nav href="projects.html">Projects ↗</a>
-          <a data-nav href="contact.html">Contact ↗</a>
-      </nav>
-    </main>
-    <footer class="footer">
-      <span>© <span data-year>2026</span> Felias</span>
-      <span>Built with intent, kept simple.</span>
-    </footer>
-  </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <span>© <span data-year>2026</span> Felias · Yazılım mühendisliği · Web · Yapay zekâ</span>
+      <span class="footer__links"><a href="projects.html">Projeler</a><a href="contact.html">İletişim</a><a href="https://github.com/F3lia5" target="_blank" rel="noreferrer">GitHub<span class="sr-only"> (yeni sekmede açılır)</span> ↗</a></span>
+    </div>
+  </footer>
 </body>
 </html>
